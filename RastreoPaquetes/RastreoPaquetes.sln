@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RastreoPaquetes", "RastreoPaquetes\RastreoPaquetes.csproj", "{4A7164C4-A11C-4F49-A9AE-0DE3432376C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RastreoPaquetesUTest", "RastreoPaquetesUTest\RastreoPaquetesUTest.csproj", "{CEA88D78-4D91-4F6C-BE13-C8A4AFAC067E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A7164C4-A11C-4F49-A9AE-0DE3432376C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A7164C4-A11C-4F49-A9AE-0DE3432376C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A7164C4-A11C-4F49-A9AE-0DE3432376C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A7164C4-A11C-4F49-A9AE-0DE3432376C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEA88D78-4D91-4F6C-BE13-C8A4AFAC067E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA88D78-4D91-4F6C-BE13-C8A4AFAC067E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA88D78-4D91-4F6C-BE13-C8A4AFAC067E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA88D78-4D91-4F6C-BE13-C8A4AFAC067E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7940B445-CDAE-4487-9A71-D54ED3566B45}
+	EndGlobalSection
+EndGlobal

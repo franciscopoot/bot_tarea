@@ -1,0 +1,17 @@
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\obj\Debug\netcoreapp3.0\RastreoPaquetes.AssemblyInfoInputs.cache
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\obj\Debug\netcoreapp3.0\RastreoPaquetes.AssemblyInfo.cs
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\bin\Debug\netcoreapp3.0\RastreoPaquetes.exe
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\bin\Debug\netcoreapp3.0\RastreoPaquetes.deps.json
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\bin\Debug\netcoreapp3.0\RastreoPaquetes.runtimeconfig.json
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\bin\Debug\netcoreapp3.0\RastreoPaquetes.runtimeconfig.dev.json
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\bin\Debug\netcoreapp3.0\RastreoPaquetes.dll
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\bin\Debug\netcoreapp3.0\RastreoPaquetes.pdb
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\bin\Debug\netcoreapp3.0\CsvHelper.dll
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\obj\Debug\netcoreapp3.0\RastreoPaquetes.csprojAssemblyReference.cache
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\obj\Debug\netcoreapp3.0\RastreoPaquetes.csproj.CopyComplete
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\obj\Debug\netcoreapp3.0\RastreoPaquetes.dll
+C:\Users\francisco.poot\Documents\Desarrollo\NetProjects\RastreoPaquetes\RastreoPaquetes\obj\Debug\netcoreapp3.0\RastreoPaquetes.pdb
