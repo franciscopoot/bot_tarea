@@ -1,23 +1,31 @@
 ﻿using RastreoPaquetes.DTO;
 using RastreoPaquetes.Interfaces;
+using RastreoPaquetes.Map;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace RastreoPaquetes.Clases
 {
     public class MaritimoAjusteCosto : IAjusteExtra
     {
-        readonly List<RangoExtras> LstAjusteCosto;
-        public MaritimoAjusteCosto()
+        readonly List<RangoExtras> LstAjusteCosto = new List<RangoExtras>();
+        public MaritimoAjusteCosto(List<TemporadaDTO> _temporadas, List<VariacionesDTO> _variaciones)
         {
-            LstAjusteCosto = new List<RangoExtras>()
-            {
-              new RangoExtras("Verano",new DateTime(2020,6,1),new DateTime(2020,8,31),1.10m),
-              new RangoExtras("Otoño",new DateTime(2020,9,1),new DateTime(2020,11,30),1.15m),
-              new RangoExtras("Invierno",new DateTime(2019,12,1),new DateTime(2020,02,29),1.23m),
-              new RangoExtras("Invierno",new DateTime(2020,12,1),new DateTime(2021,02,28),1.23m),
-            };
+            foreach (var temporada in _temporadas) {
+                var variacion = _variaciones.FirstOrDefault(f => f.Temporada.ToUpper() == temporada.Temporada.ToUpper());
+                if (variacion != null) {
+                    LstAjusteCosto.Add(new RangoExtras()
+                    {
+                        Nombre = temporada.Temporada,
+                        Inicial = DateTime.ParseExact(temporada.Inicio, "dd-MM-yyyy", null),
+                        Final = DateTime.ParseExact(temporada.Fin, "dd-MM-yyyy", null),
+                        Variacion = variacion.PorcentajeExtra
+                    }) ;
+                }
+            }
+           
         }
         public decimal ObtieneAjustePorEstacion(DateTime _fechaCompra)
         {

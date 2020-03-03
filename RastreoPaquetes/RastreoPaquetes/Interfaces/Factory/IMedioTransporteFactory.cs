@@ -7,6 +7,6 @@ namespace RastreoPaquetes.Interfaces.Factory
 {
     public interface IMedioTransporteFactory
     {
-        IMedioTransporte Create(MedioTransporteEnum _medioTransporte);
+        IMedioTransporte Create(string _medioTransporte);
     }
 }

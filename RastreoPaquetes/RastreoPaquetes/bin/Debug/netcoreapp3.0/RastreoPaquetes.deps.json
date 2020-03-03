@@ -10,7 +10,8 @@
         "dependencies": {
           "CsvHelper": "15.0.0",
           "MSTest.TestFramework": "2.1.0",
-          "Microsoft.Extensions.DependencyInjection": "3.1.2"
+          "Microsoft.Extensions.DependencyInjection": "3.1.2",
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "RastreoPaquetes.dll": {}
@@ -58,6 +59,14 @@
             "fileVersion": "14.0.4503.1"
           }
         }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
       }
     }
   },
@@ -101,6 +110,13 @@
       "sha512": "sha512-FcW3sokxmi52e4gzBdv4bv59yQWJ0Lg2F579U82O4V9Pr7aNwTe7HxlHChzQqvcqgnH69XH8aDfMlfM3Y1wjAg==",
       "path": "mstest.testframework/2.1.0",
       "hashPath": "mstest.testframework.2.1.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     }
   }
 }

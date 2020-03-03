@@ -3,18 +3,29 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using RastreoPaquetes.DTO;
+using RastreoPaquetes.Map;
 
 namespace RastreoPaquetes.Clases
 {
     public class Aereo : IMedioTransporte
     {
-        readonly List<RangoCosto> LstCosto;
-        public string Nombre => "Aereo";
+        readonly List<RangoCosto> LstCosto = new List<RangoCosto>();
+        public string Nombre { set; get; }
 
-        public decimal VelocidadEntrega => 600m;
+        public decimal VelocidadEntrega { set; get; }
 
-        public Aereo( List<RangoCosto> _lstCosto) {
-            LstCosto = _lstCosto;
+        public Aereo(List<CostoPorKilometro> _lstCosto, string _nombre, decimal _velocidad) {
+            foreach (var costo in _lstCosto)
+            {
+                LstCosto.Add(new RangoCosto()
+                {
+                    Inicial = costo.inicio,
+                    Final = costo.fin,
+                    Costo = costo.costo
+                });
+            }
+            Nombre = _nombre;
+            VelocidadEntrega = _velocidad;
         }
 
         public decimal ObtieneCostoTransporte(ParametroCalculoMedioTransporteDTO _param)

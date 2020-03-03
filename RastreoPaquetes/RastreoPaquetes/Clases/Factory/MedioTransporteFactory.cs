@@ -2,36 +2,41 @@
 using RastreoPaquetes.Enum;
 using RastreoPaquetes.Interfaces;
 using RastreoPaquetes.Interfaces.Factory;
+using RastreoPaquetes.Map;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace RastreoPaquetes.Clases.Factory
 {
     public class MedioTransporteFactory : IMedioTransporteFactory
     {
-        readonly Dictionary<string, List<RangoCosto>> dicConfiguraciones = new Dictionary<string, List<RangoCosto>>();
+        readonly List<MedioTransporteDTO> lstMediosTransporteDTO;
+        readonly List<TemporadaDTO> lstTemporadas;
 
-        public MedioTransporteFactory() {
-            dicConfiguraciones.Add(MedioTransporteEnum.Terrestre.ToString().ToUpper(), new List<RangoCosto>() { new RangoCosto(1m, 50m, 15m), new RangoCosto(51m, 200m, 10m), new RangoCosto(201m, 300, 8m), new RangoCosto(301m, null, 7m) });
-            dicConfiguraciones.Add(MedioTransporteEnum.Maritimo.ToString().ToUpper(), new List<RangoCosto>() { new RangoCosto(1m, 100m, 1m), new RangoCosto(101m, 1000m, 0.5m), new RangoCosto(1001, null, 0.3m) });
-            dicConfiguraciones.Add(MedioTransporteEnum.Aereo.ToString().ToUpper(), new List<RangoCosto>() { new RangoCosto(1m, null, 10m) });
+        public MedioTransporteFactory(List<MedioTransporteDTO> _lstMediosTransporteDTO, List<TemporadaDTO> _lstTemporadas) {
+            lstMediosTransporteDTO = _lstMediosTransporteDTO;
+            lstTemporadas = _lstTemporadas;
         }
-        public IMedioTransporte Create(MedioTransporteEnum _medioTransporte)
+        public IMedioTransporte Create(string _medioTransporte)
         {
+            var dto = lstMediosTransporteDTO.FirstOrDefault(f => f.Medio == _medioTransporte);
+            var _nombreMedioTransporteEnum = (MedioTransporteEnum)System.Enum.Parse(typeof(MedioTransporteEnum), dto.Medio);
+
             IMedioTransporte factory;
-            switch (_medioTransporte)
+            switch (_nombreMedioTransporteEnum)
             {
                 case MedioTransporteEnum.Terrestre:
-                    factory = new Terrestre(dicConfiguraciones[_medioTransporte.ToString().ToUpper()],new TerrestreAjusteTiempo());
+                    factory = new Terrestre(dto.CostoPorKilometro,new TerrestreAjusteTiempo(lstTemporadas,dto.RetrasoPorDiaPorTemporada.TiemposRetraso), dto.Medio, dto.Velocidad);
                     break;
-                case MedioTransporteEnum.Maritimo:
-                    factory = new Maritimo(dicConfiguraciones[_medioTransporte.ToString().ToUpper()],new MaritimoAjusteCosto(),new MaritimoAjusteTiempo());
+                case MedioTransporteEnum.Marítimo:
+                    factory = new Maritimo(dto.CostoPorKilometro, new MaritimoAjusteCosto(lstTemporadas,dto.CostoAdicionalPorTemporada.Variaciones),new MaritimoAjusteTiempo(lstTemporadas, dto.VelocidadPorTemporada.Variaciones),dto.Medio,dto.Velocidad);
                     break;
-                case MedioTransporteEnum.Aereo:
-                    factory = new Aereo(dicConfiguraciones[_medioTransporte.ToString().ToUpper()]);
+                case MedioTransporteEnum.Aéreo:
+                    factory = new Aereo(dto.CostoPorKilometro, dto.Medio, dto.Velocidad);
                     break;
                 default:
-                    throw new NotImplementedException($"No existe una implementación para el medio de transporte {_medioTransporte.ToString()}.");
+                    throw new NotImplementedException($"No existe una implementación para el medio de transporte {_nombreMedioTransporteEnum.ToString()}.");
                     
             }
             return factory;

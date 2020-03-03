@@ -4,8 +4,8 @@ namespace RastreoPaquetes.Enum
 {
     public enum MedioTransporteEnum
     {
-        Maritimo,
+        Marítimo,
         Terrestre,
-        Aereo
+        Aéreo
     }
 }

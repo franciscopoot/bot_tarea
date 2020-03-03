@@ -485,37 +485,13 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/9.0.1": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.CSharp": "4.0.1",
-          "System.Collections": "4.0.11",
-          "System.Diagnostics.Debug": "4.0.11",
-          "System.Dynamic.Runtime": "4.0.11",
-          "System.Globalization": "4.0.11",
-          "System.IO": "4.1.0",
-          "System.Linq": "4.1.0",
-          "System.Linq.Expressions": "4.1.0",
-          "System.ObjectModel": "4.0.12",
-          "System.Reflection": "4.1.0",
-          "System.Reflection.Extensions": "4.0.1",
-          "System.Resources.ResourceManager": "4.0.1",
-          "System.Runtime": "4.1.0",
-          "System.Runtime.Extensions": "4.1.0",
-          "System.Runtime.Serialization.Primitives": "4.1.1",
-          "System.Text.Encoding": "4.0.11",
-          "System.Text.Encoding.Extensions": "4.0.11",
-          "System.Text.RegularExpressions": "4.1.0",
-          "System.Threading": "4.0.11",
-          "System.Threading.Tasks": "4.0.11",
-          "System.Xml.ReaderWriter": "4.0.11",
-          "System.Xml.XDocument": "4.0.11"
-        },
         "compile": {
-          "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -2079,7 +2055,8 @@
         "dependencies": {
           "CsvHelper": "15.0.0",
           "MSTest.TestFramework": "2.1.0",
-          "Microsoft.Extensions.DependencyInjection": "3.1.2"
+          "Microsoft.Extensions.DependencyInjection": "3.1.2",
+          "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
           "bin/placeholder/RastreoPaquetes.dll": {}
@@ -2827,13 +2804,14 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/9.0.1": {
-      "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/9.0.1",
-      "hasTools": true,
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -2844,13 +2822,17 @@
         "lib/net45/Newtonsoft.Json.xml",
         "lib/netstandard1.0/Newtonsoft.Json.dll",
         "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.9.0.1.nupkg.sha512",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
-        "tools/install.ps1"
+        "packageIcon.png"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -6992,11 +6974,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetesUTest\\RastreoPaquetesUTest.csproj",
+      "projectUniqueName": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetesUTest\\RastreoPaquetesUTest.csproj",
       "projectName": "RastreoPaquetesUTest",
-      "projectPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetesUTest\\RastreoPaquetesUTest.csproj",
+      "projectPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetesUTest\\RastreoPaquetesUTest.csproj",
       "packagesPath": "C:\\Users\\francisco.poot\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetesUTest\\obj\\",
+      "outputPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetesUTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7016,8 +6998,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj": {
-              "projectPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj"
+            "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj": {
+              "projectPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj"
             }
           }
         }

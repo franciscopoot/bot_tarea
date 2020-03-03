@@ -63,6 +63,8 @@ namespace RastreoPaquetes.Clases
                 catch (PaqueteriaException ex) {
                     lstEstadosPedidos.Add(new EstadoPedidoDTO()
                     {
+                        Estado ="Error",
+                        Paqueteria = pedido.Paqueteria,
                         Linea = numeroLinea,
                         Mensaje = ex.Message,
                         Color = "Red"
@@ -72,6 +74,8 @@ namespace RastreoPaquetes.Clases
                 {
                     lstEstadosPedidos.Add(new EstadoPedidoDTO()
                     {
+                        Estado = "Error",
+                        Paqueteria = pedido.Paqueteria,
                         Linea = numeroLinea,
                         Mensaje = mex.Message,
                         Color = "Red"

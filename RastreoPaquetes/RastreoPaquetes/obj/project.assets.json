@@ -54,6 +54,15 @@
           "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {},
           "lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll": {}
         }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
       }
     }
   },
@@ -281,13 +290,45 @@
         "mstest.testframework.2.1.0.nupkg.sha512",
         "mstest.testframework.nuspec"
       ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "CsvHelper >= 15.0.0",
       "MSTest.TestFramework >= 2.1.0",
-      "Microsoft.Extensions.DependencyInjection >= 3.1.2"
+      "Microsoft.Extensions.DependencyInjection >= 3.1.2",
+      "Newtonsoft.Json >= 12.0.3"
     ]
   },
   "packageFolders": {
@@ -297,11 +338,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj",
+      "projectUniqueName": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj",
       "projectName": "RastreoPaquetes",
-      "projectPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj",
+      "projectPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj",
       "packagesPath": "C:\\Users\\francisco.poot\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetes\\obj\\",
+      "outputPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetes\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -343,6 +384,10 @@
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[3.1.2, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
           }
         },
         "imports": [

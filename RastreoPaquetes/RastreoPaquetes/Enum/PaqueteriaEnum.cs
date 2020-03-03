@@ -6,8 +6,8 @@ namespace RastreoPaquetes.Enum
 {
     public enum PaqueteriaEnum
     {
-        Fedex,
-        Dhl,
-        Estafeta
+        FEDEX,
+        DHL,
+        ESTAFETA
     }
 }

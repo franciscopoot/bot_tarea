@@ -21,9 +21,9 @@ namespace RastreoPaquetes.Clases
             MargenUtilidad = _margenUtilidad;
             TiempoReparto = new Dictionary<string, decimal>
             {
-                { MedioTransporteEnum.Maritimo.ToString().ToUpper(), 20m },
+                { MedioTransporteEnum.Marítimo.ToString().ToUpper(), 20m },
                 { MedioTransporteEnum.Terrestre.ToString().ToUpper(), 12m },
-                { MedioTransporteEnum.Aereo.ToString().ToUpper(), 3m }
+                { MedioTransporteEnum.Aéreo.ToString().ToUpper(), 3m }
             };
         }
         public decimal ObtenerCostoServicio(ParametrosPaqueteriaDTO _param)

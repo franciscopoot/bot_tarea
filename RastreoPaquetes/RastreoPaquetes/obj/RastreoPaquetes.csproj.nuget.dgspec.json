@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj": {}
+    "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj": {
+    "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj",
+        "projectUniqueName": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj",
         "projectName": "RastreoPaquetes",
-        "projectPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj",
+        "projectPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetes\\RastreoPaquetes.csproj",
         "packagesPath": "C:\\Users\\francisco.poot\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\RastreoPaquetes\\RastreoPaquetes\\obj\\",
+        "outputPath": "C:\\Users\\francisco.poot\\Documents\\Desarrollo\\NetProjects\\bot_tarea\\RastreoPaquetes\\RastreoPaquetes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -53,6 +53,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[3.1.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             }
           },
           "imports": [

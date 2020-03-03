@@ -5,6 +5,6 @@ namespace RastreoPaquetes.Interfaces.Factory
 {
     public interface IPaqueteriaFactory
     {
-        IPaqueteria Create(PaqueteriaEnum _nombrePaqueteria);
+        IPaqueteria Create(string _nombrePaqueteria);
     }
 }

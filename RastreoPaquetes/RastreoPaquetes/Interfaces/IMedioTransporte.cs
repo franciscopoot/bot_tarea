@@ -7,8 +7,8 @@ namespace RastreoPaquetes.Interfaces
 {
     public interface IMedioTransporte
     {
-        decimal VelocidadEntrega { get; }
-        string Nombre { get; }
+        decimal VelocidadEntrega { get; set; }
+        string Nombre { get; set; }
         decimal ObtieneCostoTransporte(ParametroCalculoMedioTransporteDTO _param);
         decimal ObtieneTiempoTransporte(ParametroCalculoMedioTransporteDTO _param);
     }

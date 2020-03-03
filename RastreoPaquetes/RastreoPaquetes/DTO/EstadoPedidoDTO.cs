@@ -6,8 +6,11 @@ namespace RastreoPaquetes.DTO
 {
     public class EstadoPedidoDTO
     {
-        public int Linea;
-        public string Mensaje;
-        public string Color;
+        public string Clasificador { set; get; }
+        public string Paqueteria { set; get; }
+        public string Estado { set; get; }
+        public int Linea { set; get; }
+        public string Mensaje { set; get; }
+        public string Color { set; get; }
     }
 }

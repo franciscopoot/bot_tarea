@@ -1,4 +1,5 @@
-﻿using RastreoPaquetes.Interfaces.Chain;
+﻿using RastreoPaquetes.DTO;
+using RastreoPaquetes.Interfaces.Chain;
 using System;
 
 namespace RastreoPaquetes.Clases.Chain
@@ -11,21 +12,21 @@ namespace RastreoPaquetes.Clases.Chain
         {
             Siguiente = _validador;
         }
-        public string ValidaFecha(TimeSpan _diferencia)
+        public ValidadorDTO ValidaFecha(TimeSpan _diferencia)
         {
+            ValidadorDTO _salida = new ValidadorDTO() { Clasificador = "Mes", Texto = "" };
             int diff = Math.Abs((int)_diferencia.TotalDays);
             int meses = diff / 30;
-            if (diff > 30)
+            if (meses == 1)
             {
-                if (meses == 1) {
-                    return $"{meses} Mes";
-                }
-                return $"{meses} Meses";
+                _salida.Texto = $"{meses} Mes";
+                return _salida;
             }
+          
             if (Siguiente != null)
                 return Siguiente.ValidaFecha(_diferencia);
 
-            return "";
+            return _salida;
         }
     }
 }

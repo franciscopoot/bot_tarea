@@ -1,36 +1,43 @@
 ﻿using RastreoPaquetes.Enum;
 using RastreoPaquetes.Interfaces;
 using RastreoPaquetes.Interfaces.Factory;
+using RastreoPaquetes.Map;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RastreoPaquetes.Clases.Factory
 {
     public class PaqueteriaFactory : IPaqueteriaFactory
     {
         readonly IMedioTransporteFactory MedioTransporteFactory;
-        public PaqueteriaFactory(IMedioTransporteFactory _medioTransporteFactory) {
+        readonly PaqueteriasDTO paqueteriasDTO;
+        public PaqueteriaFactory(IMedioTransporteFactory _medioTransporteFactory,PaqueteriasDTO _paqueteriasDTO) {
             MedioTransporteFactory = _medioTransporteFactory;
+            paqueteriasDTO = _paqueteriasDTO;
         }
-        public IPaqueteria Create(PaqueteriaEnum _nombrePaqueteria)
+        public IPaqueteria Create(string _nombrePaqueteria )
         {
-
+            var dto =   paqueteriasDTO.Paqueterias.FirstOrDefault(f => f.Paqueteria == _nombrePaqueteria);
+            var _nombrePaqueteriaEnum = (PaqueteriaEnum)System.Enum.Parse(typeof(PaqueteriaEnum), dto.Paqueteria.ToUpper());
+            List<IMedioTransporte> mediosTransporte = new List<IMedioTransporte>();
+            foreach (var medio in dto.Medios) {
+                mediosTransporte.Add(MedioTransporteFactory.Create(medio.Medio));
+            }
             IPaqueteria factory;
-            switch (_nombrePaqueteria)
+            switch (_nombrePaqueteriaEnum)
             {
-                case PaqueteriaEnum.Fedex:
-                    IMedioTransporte[] mediosTransporteFedex = { MedioTransporteFactory.Create(MedioTransporteEnum.Maritimo), MedioTransporteFactory.Create(MedioTransporteEnum.Terrestre), MedioTransporteFactory.Create(MedioTransporteEnum.Aereo) };
-                    factory = new Fedex(mediosTransporteFedex, new FedexMargenUtilidad());
+                case PaqueteriaEnum.FEDEX:
+                    factory = new Fedex(mediosTransporte.ToArray(),  new FedexMargenUtilidad(dto.MargenUtilidad));
                     break;
-                case PaqueteriaEnum.Dhl:
-                    IMedioTransporte[] mediosTransporteDhl = { MedioTransporteFactory.Create(MedioTransporteEnum.Maritimo), MedioTransporteFactory.Create(MedioTransporteEnum.Terrestre), MedioTransporteFactory.Create(MedioTransporteEnum.Aereo) };
-                    factory = new Dhl(mediosTransporteDhl, new DhlMargenUtilidad());
+                case PaqueteriaEnum.DHL:                 
+                    factory = new Dhl(mediosTransporte.ToArray(), new DhlMargenUtilidad(dto.MargenUtilidad));
                     break;
-                case PaqueteriaEnum.Estafeta:
-                    IMedioTransporte[] mediosTransporteEstafeta = { MedioTransporteFactory.Create(MedioTransporteEnum.Maritimo), MedioTransporteFactory.Create(MedioTransporteEnum.Terrestre) };
-                    factory = new Estafeta(mediosTransporteEstafeta, new EstafetaMargenUtilidad());
+                case PaqueteriaEnum.ESTAFETA:
+                    factory = new Estafeta(mediosTransporte.ToArray(), new EstafetaMargenUtilidad(dto.MargenUtilidad));
                     break;
                 default:
-                    throw new NotImplementedException($"No existe una implementación para la paqueteria {_nombrePaqueteria.ToString()}.");
+                    throw new NotImplementedException($"No existe una implementación para la paqueteria {_nombrePaqueteriaEnum.ToString()}.");
             }
             return factory;
         }

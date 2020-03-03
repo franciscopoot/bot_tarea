@@ -16,10 +16,16 @@ namespace RastreoPaquetes.Clases.Factory
             var validadorMinutos = new MinutosValidador();
             var validadorHoras = new HorasValidador();
             var validadorDias = new DiasValidador();
+            var validadorSemana = new SemanaValidador();
             var validadorMes = new MesValidador();
+            var validadorBimestre = new BimestreValidador();
+            var validadorAnio = new AnioValidador();
             validadorMinutos.AsignaSiguiente(validadorHoras);
             validadorHoras.AsignaSiguiente(validadorDias);
-            validadorDias.AsignaSiguiente(validadorMes);
+            validadorDias.AsignaSiguiente(validadorSemana);
+            validadorSemana.AsignaSiguiente(validadorMes);
+            validadorMes.AsignaSiguiente(validadorBimestre);
+            validadorBimestre.AsignaSiguiente(validadorAnio);
             Validador = validadorMinutos;
         }
         public ITextoFormateador Create(TextoFormateadorEnum _tipo)
